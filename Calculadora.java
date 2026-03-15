@@ -32,14 +32,54 @@ public class Calculadora {
         }
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Bem-vindo à Calculadora!");
-        System.out.print("OBS: Digite 0 para sair.\n");
-        while (true) {
+        Calculadora calc = new Calculadora();
+        Scanner sc = new Scanner(System.in);
+        while(true) {
             System.out.println("MENU:");
-            System.out.print("1. Somar\n2. Subtrair\n3. Multiplicar\n4. Dividir\n");
-            System.out.print("Escolha uma operação (1-4) ou 0 para sair: ");
-            int escolha = scan.nextInt();
+            System.out.println("1 - Somar");
+            System.out.println("2 - Subtrair");
+            System.out.println("3 - Multiplicar");
+            System.out.println("4 - Dividir");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha a operação: ");
+            int opcao = sc.nextInt();
+            if(opcao == 0) {
+                System.out.println("Encerrando programa.....");
+                break;
+            }
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o primeiro número: ");
+                    double num1 = sc.nextDouble();
+                    System.out.print("Digite o segundo número: ");
+                    double num2 = sc.nextDouble();
+                    System.out.println("Resultado: " + calc.somar(num1, num2));
+                    break;
+                case 2:
+                    System.out.print("Digite o primeiro número: ");
+                    num1 = sc.nextDouble();
+                    System.out.print("Digite o segundo número: ");
+                    num2 = sc.nextInt();
+                    System.out.println("Resultado: " + calc.subtrair(num1, num2));
+                    break;
+                case 3:
+                    System.out.print("Digite o primeiro número: ");
+                    num1 = sc.nextInt();
+                    System.out.print("Digite o segundo número: ");
+                    num2 = sc.nextInt();
+                    System.out.println("Resultado: " + calc.multiplicar(num1, num2));
+                    break;
+                case 4:
+                    System.out.print("Digite o primeiro número: ");
+                    num1 = sc.nextInt();
+                    System.out.print("Digite o segundo número: ");
+                    num2 = sc.nextInt();
+                    System.out.println("Resultado: " + calc.dividir(num1, num2));
+                    break;
+
+            }
         }
-    }
+        sc.close();
+       
+    } 
 }
