@@ -59,21 +59,21 @@ public class Calculadora {
                     System.out.print("Digite o primeiro número: ");
                     num1 = sc.nextDouble();
                     System.out.print("Digite o segundo número: ");
-                    num2 = sc.nextInt();
+                    num2 = sc.nextDouble();
                     System.out.println("Resultado: " + calc.subtrair(num1, num2));
                     break;
                 case 3:
                     System.out.print("Digite o primeiro número: ");
-                    num1 = sc.nextInt();
+                    num1 = sc.nextDouble();
                     System.out.print("Digite o segundo número: ");
-                    num2 = sc.nextInt();
+                    num2 = sc.nextDouble();
                     System.out.println("Resultado: " + calc.multiplicar(num1, num2));
                     break;
                 case 4:
                     System.out.print("Digite o primeiro número: ");
-                    num1 = sc.nextInt();
+                    num1 = sc.nextDouble();
                     System.out.print("Digite o segundo número: ");
-                    num2 = sc.nextInt();
+                    num2 = sc.nextDouble();
                     System.out.println("Resultado: " + calc.dividir(num1, num2));
                     break;
 
